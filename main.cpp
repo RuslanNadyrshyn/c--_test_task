@@ -1,12 +1,9 @@
-// g++ main.cpp -o main //-pthread
-// ./main 1.txt
-
-#include <future>
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <thread>
 #include <set>
+#include <thread>
+#include <future>
 
 using namespace std;
 
@@ -85,7 +82,7 @@ set<string> readWordsFromFile(streampos start, streampos end, string filename)
 
 int main(int argc, char *argv[]) {
   if (argc < 2){
-    cout << "Use './main filename.txt'" << endl;
+    std::cout << "Use './main filename.txt'" << endl;
     return 1;
   }
   
